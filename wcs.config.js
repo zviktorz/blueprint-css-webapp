@@ -3,13 +3,5 @@ module.exports = {
     newComponent: {
       componentsPath: "./src/components",
       templatesPath: "./src/component-templates",
-    },
-    sassCompilation: {
-      modules: {
-        include: ["**/*.module.scss"],
-      },
-    },
-    cssCompilation: {
-      cssModulesExt: ['.module.scss']
     }
 };
