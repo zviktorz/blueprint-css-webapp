@@ -1,10 +1,12 @@
 import React from 'react';
 import {Elevation, H1, H5, H6, Card} from "@blueprintjs/core";
 import defaultPhotoURL from './assets/img-1.jpg';
-import styles from './gift-card.module.scss';
+import './gift-card.css';
 
 export interface GiftCardProps { 
-    photoURL?: string
+    photoURL?: string;
+    full?: boolean
+
 }
 
 /**
@@ -15,26 +17,24 @@ export interface GiftCardProps {
  * 
  */
 export const GiftCard: React.FC<GiftCardProps> = ({      
-    photoURL = defaultPhotoURL
+    photoURL = defaultPhotoURL,
+    full = false
 
 }) => {
     return (
-        <Card className={`${styles.card} ${styles.wrapper}`} elevation={Elevation.FOUR}>
+        <Card className={`card ${full ? ` full` : '' }`} elevation={Elevation.FOUR}>
             <img src={photoURL} /> 
-            <div className={`${styles.card} ${styles.body}`}>
-                <H1 className={`${styles.typo} ${styles.title}`}>LASHES & HAIR EXTENTIONS</H1>
-                <H5 className={`${styles.typo} ${styles.desc}`}>
+            <div className='card-body'>
+                <H1 className='title'>LASHES & HAIR EXTENTIONS</H1>
+                <H5 className='desc'>
                     Donec faucibus, ante ut ultrices commodo, magna ex maximus, sodales neque dolor vitae arcu. 
                     Nam euismod, neque quis laoreet interdum. Sed magna est, dictum at faucibus. 
                 </H5>
-                <div className={`${styles.card} ${styles.promo}`}>
-                    <H6 className={`${styles.typo} ${styles.promo} ${styles.email}`}>EMAIL | <br/> INFO@MYSITE.COM</H6>
-                    <H1 className={`${styles.typo} ${styles.promo}`}>$50</H1>
+                <div className='promo'>
+                    <H6 className='email'>EMAIL | <br/> INFO@MYSITE.COM</H6>
+                    <H1 className='price'>$50</H1>
                 </div>                
             </div>
         </Card>
     )
 };
-
-
- 
