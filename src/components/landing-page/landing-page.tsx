@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProductItem } from '../product-item/product-item';
 import logoURL from './assets/logo.svg'; 
-import styles from './landing-page.module.scss';
+import './landing-page.css';
 
 export interface LandingPageProps {
     videoURL?: string;
@@ -24,21 +24,21 @@ export const LandingPage: React.FC<LandingPageProps> = ({
     const subTitle =  'Alaskan made. Santa approved. The best grain, the finest roast, the most powerful flavor.'
 
     return (        
-        <div className = {styles.page}>   
-            <div className = {styles.videoBG}>
-                <video className = {styles.vContent} poster={posterURL} autoPlay muted loop preload='auto'>
-                    <source src = {videoURL} type="video/mp4"/>  
+        <div className='page'>   
+            <div className='video-bg'>
+                <video className='video-content' poster={posterURL} autoPlay muted loop preload='auto'>
+                    <source src={videoURL} type="video/mp4"/>  
                 </video>
             </div>
-            <div className = {styles.content}>
-                <div className = {styles.cols}>
-                    <img className = {styles.logo} src={logoURL}/> 
-                    <p className = {styles.title}>{title}</p> 
-                    <p className = {styles.subtitle}> {subTitle}</p>
+            <div className='content'>
+                <div className='cols'>
+                    <img className='logo' src={logoURL}/> 
+                    <p className='title'>{title}</p> 
+                    <p className='sub-title'>{subTitle}</p>
                 </div>
                 <ProductItem/>
             </div> 
-            <div className = {styles.divider}>
+            <div className='divider'>
                 <svg viewBox = '0 0 300 200' width = '100%' height = '100%' preserveAspectRatio = 'none'>
                 <path d="M 0,200 C 0,200 300,200 300,0 L 300,200 z"></path>
                 </svg> 

@@ -1,14 +1,15 @@
-// google fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,500&display=swap');
 
-// Styles
+body{
+    --color: black;
+}
+
 .page {     
     font-family: 'Montserrat';
     padding:0;
     margin:0;
 }
 
-// Styles
 .content {   
     position: relative;
     display: flex;
@@ -22,44 +23,43 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    .logo {
-        height: 18rem;
-        margin-bottom: 2rem;        
-    }
-
-    .title {
-        font-size: 4em; 
-        font-weight: 700; 
-        color: #323232;
-    }
-
-    .subtitle {
-        font-size: 1.5em;
-        text-align: justify;
-        width:500px;
-        color: whitesmoke;
-        opacity: 0.6;
-    }
 }
 
-.videoBG {
+.logo {
+    height: 18rem;
+    margin-bottom: 2rem;        
+}
+
+.title {
+    font-size: 4em; 
+    font-weight: 700; 
+    color: #323232;
+}
+
+.sub-title {
+    font-size: 1.5em;
+    text-align: justify;
+    width:500px;
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+.video-bg {
     background-color: #72b9da;
     position: fixed;
     height: 100vh;
     width: 100vw;
-
-    .vContent{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-        opacity: 0.5;
-    }
 }
 
-.divider{
-    --color: black;
+.video-content{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.5;
+}
+
+.divider{    
     position: fixed;
     box-sizing: border-box;
     border-color: var(--color); 
@@ -70,8 +70,8 @@
     height: 60%;
     bottom: 0;   
     opacity: 0.5;
-    
-    svg{
-        fill: var(--color);
-    }
+}
+
+.divider> svg{
+    fill: var(--color);
 }
