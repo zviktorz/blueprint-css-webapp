@@ -1,7 +1,7 @@
 import React from 'react';
 import {Elevation, H1, TextArea, Button, Card, InputGroup, } from "@blueprintjs/core";
 import defaultLogoURL from './assets/logo.svg';
-import styles from './form-card.module.scss';
+import './form-card.css';
 
 
 export interface FormCardProps {        
@@ -25,9 +25,9 @@ export const FormCard: React.FC<FormCardProps> = ({
     const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Us'
 
     return (
-        <Card className={`${styles.card} ${styles.wrapper}`} elevation={Elevation.FOUR}>
-            <div className={`${styles.card} ${styles.header}`}>
-                <img className={styles.logo} src={logoURL} />
+        <Card className='card' elevation={Elevation.FOUR}>
+            <div className='header'>
+                <img className='logo' src={logoURL} />
                 <H1>{formTitle}</H1>
             </div>
             <InputGroup
@@ -50,9 +50,9 @@ export const FormCard: React.FC<FormCardProps> = ({
                 <TextArea/>
             )}
 
-            <div className={`${styles.card} ${styles.submit}`}>               
+            <div className='submit'>               
                 {formType !== 'contact' ? 'Forgot your Password?' : <span/>}
-                <Button text={submitCaption} className={styles.btn} intent='primary' type="submit" />
+                <Button text={submitCaption} className='btn' intent='primary' type="submit" />
             </div>
         </Card>
     )
