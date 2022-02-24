@@ -1,7 +1,5 @@
-// google fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-// Styles
 .wrapper{
     display: grid;
     gap: 1.75rem;  
@@ -19,15 +17,16 @@
 }
 
 .title {
-    font-family: 'Roboto',  sans-serif;
-    text-align: justify;
+    font-family: 'Roboto',  sans-serif;    
     color: rgb(55, 31, 31);
     margin: 0;
+}
     
-    &.sub{
-        font-family: sans-serif;
-        color: rgba(31,31,55,0.5); 
-    }
+.sub-title{
+    font-family: sans-serif;
+    text-align: justify;
+    color: rgba(31,31,55,0.5); 
+    margin: 0;
 }
 
 .btn {    

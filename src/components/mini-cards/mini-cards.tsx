@@ -1,8 +1,7 @@
 import React from 'react';
 import {Elevation, H3, Card, Switch, Spinner, ProgressBar, Button, Callout, IconName } from "@blueprintjs/core";
 import logo from './assets/logo.svg';
-import styles from './mini-cards.module.scss';
-
+import './mini-cards.css';
 
 export interface MiniCardsProps {    
     intent?: 'primary' | 'success' | 'warning' | 'danger';
@@ -48,25 +47,25 @@ export const MiniCards: React.FC<MiniCardsProps> = ({
     }
     
     return (
-        <Card className={styles.wrapper}> 
-            <img className={styles.logo} src={logo} />                       
-            <Card className={styles.card} elevation={Elevation.THREE}>
+        <Card className='wrapper'> 
+            <img className='logo' src={logo} />                       
+            <Card className='card' elevation={Elevation.THREE}>
                 <Switch defaultChecked large />
                 <div >
-                    <H3 className={styles.title}>Enable Communication Limits</H3>            
-                    <p className={`${styles.title} ${styles.sub}`}>Limits apply to Phone, FaceTime, Messages and iCloud contacts. </p>
+                    <H3 className='title'>Enable Communication Limits</H3>            
+                    <p className='subtitle'>Limits apply to Phone, FaceTime, Messages and iCloud contacts. </p>
                 </div>
             </Card>
-            <Card className={styles.card} elevation={Elevation.THREE}>
+            <Card className='card' elevation={Elevation.THREE}>
                 <Spinner intent={intent} size={33} />
-                <span/><H3 className={styles.title}>Software Update Installation...</H3>
+                <span/><H3 className='title'>Software Update Installation...</H3>
             </Card>            
-            <Card className={styles.card} elevation={Elevation.THREE}>
+            <Card className='card' elevation={Elevation.THREE}>
                 <ProgressBar animate={false} intent={intent} value={0.65}/>
-                <span/><Button className={styles.btn} intent={intent} icon="cross"/>
+                <span/><Button className='btn' intent={intent} icon="cross"/>
             </Card>
             <Callout title={calloutTitle} icon={calloutIcon} intent={intent}>
-                    <p className={`${styles.title} ${styles.sub}`}>{calloutText}</p>
+                    <p className='subtitle'>{calloutText}</p>
             </Callout>
         </Card>
     )
