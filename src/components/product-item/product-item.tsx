@@ -1,7 +1,7 @@
 import React from 'react';
 import {Elevation, Card, Icon} from "@blueprintjs/core";
 import defaultItemPhoto from './assets/pprmint.png';
-import styles from './product-item.module.scss';
+import './product-item.css';
 
 export interface ProductItemProps { 
     itemPhotoURL?: string;
@@ -28,33 +28,33 @@ export const ProductItem: React.FC<ProductItemProps> = ({
 
 }) => {
     return (
-        <Card className={styles.product_wrapper} elevation={Elevation.FOUR}>             
-            <img className={styles.product_image} src={itemPhotoURL} />            
-            <Card className={styles.product_body}>                
-                <div className={styles.product_row}> 
-                    <p className={styles.product_name}>{itemName}</p>
-                    <p className={styles.product_price}>{'$' + itemPrice}</p>
+        <Card className='product-wrapper' elevation={Elevation.FOUR}>             
+            <img src={itemPhotoURL} />            
+            <Card className='product-body'>                
+                <div className='row'> 
+                    <p className='name'>{itemName}</p>
+                    <p className='price'>{'$' + itemPrice}</p>
                 </div>
-                <div className={styles.product_row}>
-                    <p className={styles.product_option}>Big</p>
+                <div className='row'>
+                    <p className='option'>Big</p>
                     <input type='radio' name='radio' defaultChecked/>
                 </div>
-                <div className={styles.product_row}> 
-                    <p className={styles.product_option}>Medium</p>
+                <div className='row'> 
+                    <p className='option'>Medium</p>
                     <input type='radio' name='radio'/>
                 </div>
-                <div className={styles.product_row}> 
-                    <p className={styles.product_option}>Small</p>
+                <div className='row'> 
+                    <p className='option'>Small</p>
                     <input type='radio' name='radio' />
                 </div>                    
-                <div className={styles.product_row}>
-                    <p className={styles.product_desc}>{itemDescription}</p>                  
+                <div className='row'>
+                    <p className='desc'>{itemDescription}</p>                  
                 </div>
-                <div className={styles.product_row}>               
-                    <button className={styles['btn-icon']} type='button'>
+                <div className='row'>               
+                    <button className='btn-icon' type='button'>
                         <Icon icon='heart' color={isFavorite ? '#ff7979': 'white'} size={20} />
                     </button>
-                    <button className={styles['btn-add']} type='button'>Add to cart</button>
+                    <button className='btn-add' type='button'>Add to cart</button>
                 </div>
             </Card>
         </Card>
