@@ -1,0 +1,10 @@
+{
+  "name": "blueprint-css-webapp",
+  "rootDir": "playground",
+  "files": [
+    "*"
+  ],
+  "exposure": [
+    "wix-pages"
+  ]
+}
