@@ -5,6 +5,6 @@ module.exports = {
       templatesPath: "./src/component-templates",
     },
     staticDeploy: {
-      include: ['./src/components/**/*']
+      include: ['./src/components/**/*','./src/component-templates/**/*']
     }
 };
