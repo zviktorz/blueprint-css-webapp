@@ -12,7 +12,11 @@ run `npx janet deploy` to update the deployed demo with the contents of your pla
 In order to prevent overwriting our production demo, the janet.json file refers to `blueprint-css-webapp-test`
 
 **if you want to update the live demo on our website**
+
+
 Change `blueprint-css-webapp-test` -> `blueprint-css-webapp`
+
+
 **Do this with caution**
 
 ## Getting Started
