@@ -6,6 +6,15 @@ This project includes a collection of [blueprint](https://blueprintjs.com) compo
 
 Use this example to get a feel for how easy and fun it is to create and edit components in WCS that are based on 3rd party component libraries.
 
+# Deployment
+run `npx janet deploy` to update the deployed demo with the contents of your playground folder
+
+In order to prevent overwriting our production demo, the janet.json file refers to `blueprint-css-webapp-test`
+
+**if you want to update the live demo on our website**
+Change `blueprint-css-webapp-test` -> `blueprint-css-webapp`
+**Do this with caution**
+
 ## Getting Started
 
 Install the latest version of the WCS desktop application to get started. Refer [here](https://component-studio.wixanswers.com/en/article/kb32828) for prerequisites and setup instructions.
