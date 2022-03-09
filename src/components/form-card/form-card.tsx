@@ -30,6 +30,7 @@ export const FormCard: React.FC<FormCardProps> = ({
                 <img className='logo' src={logoURL} />
                 <H1>{formTitle}</H1>
                 <H1>{formTitle}</H1>
+                <H1>{formTitle}</H1>
             </div>
             <InputGroup
                 type='email'
