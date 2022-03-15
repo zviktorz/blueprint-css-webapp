@@ -1,10 +1,10 @@
 import React from 'react';
-import {Elevation, H1, TextArea, Button, Card, InputGroup, } from "@blueprintjs/core";
+import { Elevation, H1, TextArea, Button, Card, InputGroup, } from "@blueprintjs/core";
 import defaultLogoURL from './assets/logo.svg';
 import './form-card.css';
 
 
-export interface FormCardProps {        
+export interface FormCardProps {
     formType?: 'signin' | 'contact' | 'signup';
     logoURL?: string;
 }
@@ -16,11 +16,11 @@ export interface FormCardProps {
  * Use this demo to get a feel for how easy and fun it is to create and edit components in WCS using Blueprint.js, a 3rd party React-based UI toolkit.
  * 
  */
-export const FormCard: React.FC<FormCardProps> = ({     
-    formType = 'signin',        
+export const FormCard: React.FC<FormCardProps> = ({
+    formType = 'signin',
     logoURL = defaultLogoURL
 
-}) => {    
+}) => {
     const submitCaption = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Send'
     const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Us'
 
@@ -29,30 +29,29 @@ export const FormCard: React.FC<FormCardProps> = ({
             <div className='header'>
                 <img className='logo' src={logoURL} />
                 <H1>{formTitle}</H1>
-                <H1>{formTitle}</H1>
             </div>
             <InputGroup
                 type='email'
                 fill
                 round
-                placeholder = 'Your Email' 
-                id='email'       
+                placeholder='Your Email'
+                id='email'
             />
 
             {formType !== 'contact' ? (
-                <InputGroup   
-                    type='password'                
+                <InputGroup
+                    type='password'
                     fill
                     round
-                    placeholder = 'Password'  
-                    id='pass'             
+                    placeholder='Password'
+                    id='pass'
                 />
             ) : (
-                <TextArea/>
+                <TextArea />
             )}
 
-            <div className='submit'>               
-                {formType !== 'contact' ? 'Forgot your Password?' : <span/>}
+            <div className='submit'>
+                {formType !== 'contact' ? 'Forgot your Password?' : <span />}
                 <Button text={submitCaption} className='btn' intent='primary' type="submit" />
             </div>
         </Card>
