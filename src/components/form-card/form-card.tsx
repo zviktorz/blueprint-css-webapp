@@ -22,7 +22,7 @@ export const FormCard: React.FC<FormCardProps> = ({
 
 }) => {
     const submitCaption = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Send'
-    const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Uzzzzz'
+    const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Uz'
 
     return (
         <Card className='card' elevation={Elevation.FOUR}>
