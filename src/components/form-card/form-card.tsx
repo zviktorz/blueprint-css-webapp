@@ -1,7 +1,19 @@
+// Asset resolved to { package: 'react', file: './index.js' }
+// Types resolved to { package: '@types/react', file: './index.d.ts' }
 import React from 'react';
 import { Elevation, H1, TextArea, Button, Card, InputGroup, } from "@blueprintjs/core";
 import defaultLogoURL from './assets/logo.svg';
+
+// Asset resolved to { file: './src/components/form-card/form-card.scss' }
 import './form-card.css';
+
+// Files to fetch:
+// react/index.js and its recursive dependencies 
+// @types/react/index.d.ts and its recursive dependencies 
+// @blueprintjs/core.....index.d.ts and its recursive dependencies 
+// @blueprintjs/core.....index.d.ts and its recursive dependencies 
+// ./src/components/form-card/form-card.scss and its recursive dependencies 
+// ./src/components/assets/logo.svg
 
 
 export interface FormCardProps {
