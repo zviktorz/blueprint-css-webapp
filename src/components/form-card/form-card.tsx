@@ -8,11 +8,11 @@ import defaultLogoURL from './assets/logo.svg';
 import './form-card.css';
 
 // Files to fetch:
-// react/index.js and its recursive dependencies 
-// @types/react/index.d.ts and its recursive dependencies 
-// @blueprintjs/core.....index.d.ts and its recursive dependencies 
-// @blueprintjs/core.....index.d.ts and its recursive dependencies 
-// ./src/components/form-card/form-card.scss and its recursive dependencies 
+// react/index.js and its recursive dependencies
+// @types/react/index.d.ts and its recursive dependencies
+// @blueprintjs/core.....index.d.ts and its recursive dependencies
+// @blueprintjs/core.....index.d.ts and its recursive dependencies
+// ./src/components/form-card/form-card.scss and its recursive dependencies
 // ./src/components/assets/logo.svg
 
 
@@ -22,11 +22,11 @@ export interface FormCardProps {
 }
 
 /**
- * This Form Card component is a simple demo component to showcase the capabilities of Wix Component Studio, 
+ * This Form Card component is a simple demo component to showcase the capabilities of Wix Component Studio,
  * it is a basic implementation, which is not meant to be utilized in a production environment.
- * 
+ *
  * Use this demo to get a feel for how easy and fun it is to create and edit components in WCS using Blueprint.js, a 3rd party React-based UI toolkit.
- * 
+ *
  */
 export const FormCard: React.FC<FormCardProps> = ({
     formType = 'signin',
@@ -34,7 +34,7 @@ export const FormCard: React.FC<FormCardProps> = ({
 
 }) => {
     const submitCaption = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Send'
-    const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Uz'
+    const formTitle = formType === 'signin' ? 'Sign In' : formType === 'signup' ? 'Sign Up' : 'Contact Us'
 
     return (
         <Card className='card' elevation={Elevation.FOUR}>
