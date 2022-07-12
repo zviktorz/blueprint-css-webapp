@@ -18,7 +18,7 @@ export interface MiniCardsProps {
  */
 export const MiniCards: React.FC<MiniCardsProps> = ({     
     intent = 'primary',
-    calloutText = 'Aliquam imperdiet lacus quam, imperdiet fermentum lectus pretium vitae. Curabitur quis porttitor lorem, sed porttitor erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam et blandit nisi. Curabitur iaculis vitae tellus sed hendrerit. Vestbulum fringilla massa in quam iaculis ullamcorper.'
+    calloutText = 'An updated callout text!!! Aliquam imperdiet lacus quam, imperdiet fermentum lectus pretium vitae. Curabitur quis porttitor lorem, sed porttitor erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam et blandit nisi. Curabitur iaculis vitae tellus sed hendrerit. Vestbulum fringilla massa in quam iaculis ullamcorper.'
 
 }) => {    
     
